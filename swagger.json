@@ -43,7 +43,7 @@
           "401" : {
             "description" : "Não autorizado",
             "schema" : {
-              "$ref" : "#/definitions/ErroToken"
+              "$ref" : "#/definitions/AuthError"
             }
           }
         }
@@ -61,12 +61,12 @@
           "properties" : {
             "banco" : {
               "type" : "string",
-              "description" : "Código do banco com 3 caracteres, zero a esquerda se houver",
+              "description" : "Código do banco com zero a esquerda se houver, bancos homologados:\n   * `001` - Banco do Brasil\n   * `033` - Santander\n   * `237` - Bradesco\n   * `341` - Itaú\n   * `422` - Banco Safra\n",
               "example" : "033"
             },
             "cnab" : {
               "type" : "number",
-              "description" : "Código do CNAB 400 ou 240",
+              "description" : "Código do CNAB:\n  * `400` \n  * `240`\n",
               "example" : 400
             },
             "carteira" : {
@@ -83,41 +83,42 @@
               "type" : "string",
               "description" : "Nº de cedente, informação obtida no banco",
               "example" : "00112233"
+            },
+            "agencia" : {
+              "type" : "string",
+              "description" : "Nº Agência Bancária",
+              "example" : "00112233"
             }
           }
         }
       }
     },
-    "Coligada" : {
-      "type" : "object",
-      "properties" : {
-        "coligadacodigo" : {
-          "type" : "integer",
-          "format" : "int64",
-          "example" : 1
-        },
-        "coligadanome" : {
-          "type" : "string",
-          "example" : "WClasses Educacional"
-        },
-        "cnpj" : {
-          "type" : "string",
-          "example" : "32409931000134"
-        }
-      },
-      "description" : "Dados da Coligada"
-    },
-    "ErroToken" : {
+    "AuthError" : {
       "properties" : {
         "errors" : {
           "type" : "array",
           "items" : {
             "type" : "object",
             "properties" : {
+              "name" : {
+                "type" : "string",
+                "description" : "Nome do erro",
+                "example" : "Unauthorized"
+              },
               "message" : {
                 "type" : "string",
                 "description" : "Descrição do erro",
-                "example" : "E_INVALID_API_TOKEN: Invalid API token"
+                "example" : "Your request was made with invalid credentials."
+              },
+              "code" : {
+                "type" : "string",
+                "description" : "Código do erro",
+                "example" : "0"
+              },
+              "status" : {
+                "type" : "number",
+                "description" : "Código de status HTTP",
+                "example" : 401
               }
             }
           }
