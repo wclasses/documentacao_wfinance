@@ -26,49 +26,23 @@
     "description" : "Contratos, lançamentos, faturas, dados financeiros"
   } ],
   "paths" : {
-    "/coligada" : {
-      "get" : {
-        "tags" : [ "Instituição" ],
-        "summary" : "Listar Coligadas",
-        "operationId" : "Coligada - Index",
-        "description" : "Lista as coligadas cadastradas no sistema\n",
+    "/api/remessa" : {
+      "post" : {
+        "tags" : [ "Arquivo Remessa" ],
+        "summary" : "Gerar Arquivo Remessa",
+        "operationId" : "Remessa Create",
+        "description" : "Gera um arquivo remessa\n",
         "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "Resposta da requisição",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/Coligada"
-              }
-            }
-          },
-          "401" : {
-            "description" : "Não autorizado",
-            "schema" : {
-              "$ref" : "#/definitions/ErroToken"
-            }
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body,",
+          "description" : "Configurações do banco escolhido e lista de registros",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GerarRemessa"
           }
-        }
-      }
-    },
-    "/filial" : {
-      "get" : {
-        "tags" : [ "Instituição" ],
-        "summary" : "Listar Filiais",
-        "operationId" : "Filial - Index",
-        "description" : "Lista as filiais cadastradas no sistema\n",
-        "produces" : [ "application/json" ],
+        } ],
         "responses" : {
-          "200" : {
-            "description" : "Resposta da requisição",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/Filial"
-              }
-            }
-          },
           "401" : {
             "description" : "Não autorizado",
             "schema" : {
@@ -80,6 +54,38 @@
     }
   },
   "definitions" : {
+    "GerarRemessa" : {
+      "type" : "object",
+      "required" : [ "config", "registros" ],
+      "properties" : {
+        "config" : {
+          "type" : "object",
+          "required" : [ "banco", "cnab", "carteira" ],
+          "properties" : {
+            "banco" : {
+              "type" : "string",
+              "description" : "Código do banco com 3 caracteres, zero a esquerda se houver",
+              "example" : "033"
+            },
+            "cnab" : {
+              "type" : "number",
+              "description" : "Código do CNAB 400 ou 240",
+              "example" : 400
+            },
+            "carteira" : {
+              "type" : "number",
+              "description" : "Número da carteira",
+              "example" : 101
+            },
+            "variacaoCarteira" : {
+              "type" : "string",
+              "description" : "Nº de variação da carteira se houver",
+              "example" : "019"
+            }
+          }
+        }
+      }
+    },
     "Coligada" : {
       "type" : "object",
       "properties" : {
@@ -113,20 +119,6 @@
               }
             }
           }
-        }
-      }
-    },
-    "Filial" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "string",
-          "format" : "uuid",
-          "example" : 10
-        },
-        "filialnome" : {
-          "type" : "string",
-          "example" : "WClasses Educacional"
         }
       }
     }
