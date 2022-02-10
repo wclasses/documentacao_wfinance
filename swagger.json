@@ -61,7 +61,7 @@
           "properties" : {
             "banco" : {
               "type" : "string",
-              "description" : "Código do banco com zero a esquerda se houver, bancos homologados:\n   * `001` - Banco do Brasil\n   * `033` - Santander\n   * `237` - Bradesco\n   * `341` - Itaú\n   * `422` - Banco Safra\n",
+              "description" : "Código do banco com zero a esquerda se houver, bancos homologados:\n   * `001` - Banco do Brasil - CNAB 240\n   * `033` - Santander - CNAB 400\n   * `237` - Bradesco - CNAB 400\n   * `341` - Itaú - CNAB 400\n   * `422` - Banco Safra - CNAB 400\n",
               "example" : "033"
             },
             "cnab" : {
@@ -143,6 +143,34 @@
               "type" : "number",
               "description" : "Número sequencial da remessa se houver",
               "example" : 50
+            }
+          }
+        },
+        "registros" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "numeroDocumento" : {
+                "type" : "string",
+                "description" : "Número do documento (boleto, fatura, etc)",
+                "example" : "1234"
+              },
+              "nossoNumero" : {
+                "type" : "string",
+                "description" : "Nosso Número",
+                "example" : "6565849"
+              },
+              "dataDocumento" : {
+                "type" : "string",
+                "description" : "Data de geração do documento no formato DDMMYY.\nExemplo para a data: 10/02/2022\n",
+                "example" : "100222"
+              },
+              "dataVencimento" : {
+                "type" : "string",
+                "description" : "Data de vencimento do documento no formato DDMMYY.\nExemplo para a data: 15/02/2022\n",
+                "example" : "150222"
+              }
             }
           }
         }
