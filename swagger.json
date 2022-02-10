@@ -150,33 +150,25 @@
     },
     "AuthError" : {
       "properties" : {
-        "errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "name" : {
-                "type" : "string",
-                "description" : "Nome do erro",
-                "example" : "Unauthorized"
-              },
-              "message" : {
-                "type" : "string",
-                "description" : "Descrição do erro",
-                "example" : "Your request was made with invalid credentials."
-              },
-              "code" : {
-                "type" : "string",
-                "description" : "Código do erro",
-                "example" : "0"
-              },
-              "status" : {
-                "type" : "number",
-                "description" : "Código de status HTTP",
-                "example" : 401
-              }
-            }
-          }
+        "name" : {
+          "type" : "string",
+          "description" : "Nome do erro",
+          "example" : "Unauthorized"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Descrição do erro",
+          "example" : "Your request was made with invalid credentials."
+        },
+        "code" : {
+          "type" : "string",
+          "description" : "Código do erro",
+          "example" : "0"
+        },
+        "status" : {
+          "type" : "number",
+          "description" : "Código de status HTTP",
+          "example" : 401
         }
       }
     }
