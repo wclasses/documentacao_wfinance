@@ -21,9 +21,6 @@
   }, {
     "name" : "Boleto",
     "description" : "Geração e visualização de boletos"
-  }, {
-    "name" : "Financeiro",
-    "description" : "Contratos, lançamentos, faturas, dados financeiros"
   } ],
   "paths" : {
     "/api/remessa" : {
@@ -129,6 +126,14 @@
     }
   },
   "schemes" : [ "https" ],
+  "securityDefinitions" : {
+    "basicAuth" : {
+      "type" : "basic"
+    }
+  },
+  "security" : [ {
+    "basicAuth" : [ ]
+  } ],
   "host" : "virtserver.swaggerhub.com",
   "basePath" : "/WFinance/WFinance/1.0.0"
 }
