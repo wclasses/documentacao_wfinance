@@ -57,7 +57,7 @@
       "properties" : {
         "config" : {
           "type" : "object",
-          "required" : [ "banco", "cnab", "carteira", "cedente" ],
+          "required" : [ "banco", "cnab", "carteira", "cedente", "agencia", "digitoAgencia", "contaCorrente", "digitoContaCorrente" ],
           "properties" : {
             "banco" : {
               "type" : "string",
@@ -86,8 +86,63 @@
             },
             "agencia" : {
               "type" : "string",
-              "description" : "Nº Agência Bancária",
-              "example" : "00112233"
+              "description" : "Nº Agência Bancária sem o dígito",
+              "example" : "0123"
+            },
+            "digitoAgencia" : {
+              "type" : "string",
+              "description" : "Nº do dígito Agência Bancária",
+              "example" : "0"
+            },
+            "contaCorrente" : {
+              "type" : "string",
+              "description" : "Nº da conta corrente sem o dígito",
+              "example" : "0123456"
+            },
+            "digitoContaCorrente" : {
+              "type" : "string",
+              "description" : "Nº do dígito da conta corrente",
+              "example" : "1"
+            },
+            "cedenteNome" : {
+              "type" : "string",
+              "description" : "Nome do cedente, nome da sua empresa:",
+              "example" : "Escola infantil Aprender LTDA"
+            },
+            "cedenteCpfCnpj" : {
+              "type" : "string",
+              "description" : "CPF/CNPJ do cedente/empresa. Apenas números",
+              "example" : "35234582000155"
+            },
+            "cedenteLogradouro" : {
+              "type" : "string",
+              "description" : "Endereço e número do cedente/empresa",
+              "example" : "Rua nove de Julho 72"
+            },
+            "cedenteBairro" : {
+              "type" : "string",
+              "description" : "Bairro do cedente/empresa",
+              "example" : "Santo Amaro"
+            },
+            "cedenteCidade" : {
+              "type" : "string",
+              "description" : "Cidade do cedente/empresa",
+              "example" : "São Paulo"
+            },
+            "cedenteEstado" : {
+              "type" : "string",
+              "description" : "Estado do cedente/empresa, 2 caracteres",
+              "example" : "SP"
+            },
+            "cedenteCep" : {
+              "type" : "string",
+              "description" : "CEP do cedente/empresa, 8 caracteres, apenas números",
+              "example" : "12345678"
+            },
+            "sequencialRemessa" : {
+              "type" : "number",
+              "description" : "Número sequencial da remessa se houver",
+              "example" : 50
             }
           }
         }
