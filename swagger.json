@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "## API do Sistema de Boletos WFinance Deve ser utilizado Basic Auth com token de acesso nas requisições\nPara obter o token de acesso entre em contato. ",
+    "description" : "## API do Sistema de Boletos WFinance Deve ser utilizado Basic Auth, informando o token de acesso nos campos de **Usuário** e **Senha**\nPara obter o token de acesso entre em contato. ",
     "version" : "1.0.0",
     "title" : "WFinance API - 1.0.0",
     "contact" : {
