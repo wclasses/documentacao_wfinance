@@ -60,7 +60,7 @@
       "properties" : {
         "config" : {
           "type" : "object",
-          "required" : [ "banco", "cnab", "carteira" ],
+          "required" : [ "banco", "cnab", "carteira", "cedente" ],
           "properties" : {
             "banco" : {
               "type" : "string",
@@ -81,6 +81,11 @@
               "type" : "string",
               "description" : "Nº de variação da carteira se houver",
               "example" : "019"
+            },
+            "cedente" : {
+              "type" : "string",
+              "description" : "Nº de cedente, informação obtida no banco",
+              "example" : "00112233"
             }
           }
         }
@@ -124,15 +129,16 @@
     }
   },
   "schemes" : [ "https" ],
-  "securityDefinitions" : {
-    "Bearer" : {
-      "type" : "apiKey",
-      "name" : "Authorization",
-      "in" : "header"
+  "components" : {
+    "securitySchemes" : {
+      "basicAuth" : {
+        "type" : "http",
+        "scheme" : "basic"
+      }
     }
   },
   "security" : [ {
-    "Bearer" : [ ]
+    "basicAuth" : [ ]
   } ],
   "host" : "virtserver.swaggerhub.com",
   "basePath" : "/WFinance/WFinance/1.0.0"
