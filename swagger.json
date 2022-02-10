@@ -129,17 +129,6 @@
     }
   },
   "schemes" : [ "https" ],
-  "components" : {
-    "securitySchemes" : {
-      "basicAuth" : {
-        "type" : "http",
-        "scheme" : "basic"
-      }
-    }
-  },
-  "security" : [ {
-    "basicAuth" : [ ]
-  } ],
   "host" : "virtserver.swaggerhub.com",
   "basePath" : "/WFinance/WFinance/1.0.0"
 }
