@@ -70,9 +70,11 @@
               "example" : 400
             },
             "carteira" : {
-              "type" : "number",
+              "type" : "string",
               "description" : "Número da carteira",
-              "example" : 101
+              "example" : "17",
+              "minLength" : 1,
+              "maxLength" : 3
             },
             "variacaoCarteira" : {
               "type" : "string",
@@ -87,7 +89,9 @@
             "agencia" : {
               "type" : "string",
               "description" : "Nº Agência Bancária sem o dígito",
-              "example" : "0123"
+              "example" : "0123",
+              "minLength" : 1,
+              "maxLength" : 5
             },
             "digitoAgencia" : {
               "type" : "string",
