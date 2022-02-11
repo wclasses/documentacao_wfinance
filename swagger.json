@@ -45,6 +45,37 @@
             "schema" : {
               "$ref" : "#/definitions/AuthError"
             }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "errors" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "id" : {
+                        "type" : "number",
+                        "example" : 1100,
+                        "description" : "ID do registro/documento ou da seção que apresentou errro"
+                      },
+                      "field" : {
+                        "type" : "string",
+                        "example" : "numeroDocumento",
+                        "description" : "Nome do campo com erro"
+                      },
+                      "message" : {
+                        "type" : "string",
+                        "example" : "Já existe um boleto com esse nº de documento para a AG e CC",
+                        "description" : "Descrição do erro"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
