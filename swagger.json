@@ -236,8 +236,13 @@
               },
               "valorCobradoDiaAtraso" : {
                 "type" : "number",
-                "description" : "Valor dos juros cobrado por dia.  O valor máximo é de 1% ao mês, então calcular Valor Bruto * 0,00033\n",
+                "description" : "Valor dos juros cobrado por dia. O valor máximo é de 1% ao mês, se for aplicado calcular Valor Bruto * 0,00033\n",
                 "example" : 0.29
+              },
+              "valorDesconto" : {
+                "type" : "string",
+                "description" : "Valor do desconto, se condicional ao vencimento informar a  data limite de aplicação. Formato: DDMMYY\n",
+                "example" : "150222"
               }
             }
           }
