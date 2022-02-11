@@ -57,7 +57,7 @@
       "properties" : {
         "config" : {
           "type" : "object",
-          "required" : [ "banco", "cnab", "carteira", "cedente", "agencia", "digitoAgencia", "contaCorrente", "digitoContaCorrente" ],
+          "required" : [ "banco", "cnab", "carteira", "agencia", "contaCorrente", "cedenteNome", "sequencialRemessa" ],
           "properties" : {
             "banco" : {
               "type" : "string",
@@ -141,7 +141,7 @@
             },
             "sequencialRemessa" : {
               "type" : "number",
-              "description" : "Número sequencial da remessa se houver",
+              "description" : "Número sequencial da remessa",
               "example" : 50
             }
           }
