@@ -132,17 +132,23 @@
             "cedenteEstado" : {
               "type" : "string",
               "description" : "Estado do cedente/empresa, 2 caracteres",
-              "example" : "SP"
+              "example" : "SP",
+              "minimum" : 2,
+              "maximum" : 2
             },
             "cedenteCep" : {
               "type" : "string",
               "description" : "CEP do cedente/empresa, 8 caracteres, apenas números",
-              "example" : "12345678"
+              "example" : "12345678",
+              "minimum" : 8,
+              "maximum" : 8
             },
             "sequencialRemessa" : {
               "type" : "number",
               "description" : "Número sequencial da remessa",
-              "example" : 50
+              "example" : 50,
+              "minimum" : 1,
+              "maximum" : 999999
             }
           }
         },
