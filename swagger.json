@@ -47,7 +47,7 @@
             }
           },
           "400" : {
-            "description" : "Bad Request",
+            "description" : "Bad Request - Erro na validação dos dados",
             "schema" : {
               "type" : "object",
               "properties" : {
