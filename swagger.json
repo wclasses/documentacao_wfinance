@@ -58,7 +58,7 @@
                     "properties" : {
                       "id" : {
                         "type" : "number",
-                        "example" : 1100,
+                        "example" : 1234,
                         "description" : "ID do registro/documento ou da seção que apresentou errro"
                       },
                       "field" : {
@@ -88,17 +88,18 @@
       "properties" : {
         "config" : {
           "type" : "object",
+          "description" : "Sessão de configuração onde será informado os dados cadastrais e  bancários do cedente.\n",
           "required" : [ "banco", "cnab", "carteira", "agencia", "contaCorrente", "cedenteNome", "sequencialRemessa", "cedenteEstado", "cedenteCep" ],
           "properties" : {
             "banco" : {
               "type" : "string",
               "description" : "Código do banco com zero a esquerda se houver, bancos homologados:\n   * `001` - Banco do Brasil - CNAB 240\n   * `033` - Santander - CNAB 400\n   * `237` - Bradesco - CNAB 400\n   * `341` - Itaú - CNAB 400\n   * `422` - Banco Safra - CNAB 400\n",
-              "example" : "033"
+              "example" : "001"
             },
             "cnab" : {
               "type" : "number",
               "description" : "Código do CNAB:\n  * `400` \n  * `240`\n",
-              "example" : 400
+              "example" : 240
             },
             "carteira" : {
               "type" : "string",
@@ -191,6 +192,8 @@
         },
         "registros" : {
           "type" : "array",
+          "maxItems" : 1000,
+          "description" : "Array de objetos contendo os registros (boletos) que serão inclusos  na remessa. Cada objeto nesse array representa um boleto.\nLimite máximo de registros por remessa = 1000\n",
           "items" : {
             "type" : "object",
             "required" : [ "numeroDocumento", "nossoNumero" ],
@@ -218,6 +221,18 @@
                 "type" : "string",
                 "description" : "Data de vencimento do documento no formato DDMMYY.\nExemplo para a data: 15/02/2022\n",
                 "example" : "150222"
+              },
+              "valorCobrado" : {
+                "type" : "number",
+                "description" : "Valor Bruto do registro\n",
+                "example" : 899.9
+              },
+              "percentualMulta" : {
+                "type" : "number",
+                "description" : "Percentual de multa a ser aplicado após vencimento.\nDe acordo com o artigo 52, parágrafo primeiro do Código de  Defesa do Consumidor, a cobrança da multa não pode ser  maior que 2%.\n",
+                "example" : 2.0,
+                "minimum" : 0,
+                "maximum" : 2.0
               }
             }
           }
