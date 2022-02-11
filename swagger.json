@@ -57,7 +57,7 @@
       "properties" : {
         "config" : {
           "type" : "object",
-          "required" : [ "banco", "cnab", "carteira", "agencia", "contaCorrente", "cedenteNome", "sequencialRemessa" ],
+          "required" : [ "banco", "cnab", "carteira", "agencia", "contaCorrente", "cedenteNome", "sequencialRemessa", "cedenteEstado", "cedenteCep" ],
           "properties" : {
             "banco" : {
               "type" : "string",
@@ -112,7 +112,9 @@
             "cedenteCpfCnpj" : {
               "type" : "string",
               "description" : "CPF/CNPJ do cedente/empresa. Apenas números",
-              "example" : "35234582000155"
+              "example" : "35234582000155",
+              "minLength" : 11,
+              "maxLength" : 14
             },
             "cedenteLogradouro" : {
               "type" : "string",
@@ -131,7 +133,7 @@
             },
             "cedenteEstado" : {
               "type" : "string",
-              "description" : "Estado do cedente/empresa, 2 caracteres",
+              "description" : "Estado (UF) do cedente/empresa, 2 caracteres",
               "example" : "SP",
               "minLength" : 2,
               "maxLength" : 2
