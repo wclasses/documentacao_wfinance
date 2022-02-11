@@ -162,16 +162,21 @@
           "type" : "array",
           "items" : {
             "type" : "object",
+            "required" : [ "numeroDocumento", "nossoNumero" ],
             "properties" : {
               "numeroDocumento" : {
-                "type" : "string",
-                "description" : "Número do documento (boleto, fatura, etc)",
-                "example" : "1234"
+                "type" : "number",
+                "description" : "Número do documento (boleto, fatura, etc).\nO número máximo de caracteres pode variar de acordo com o banco. Consultar o manual do Banco para mais informações\n",
+                "example" : 1234,
+                "minimum" : 1,
+                "maximum" : 10
               },
               "nossoNumero" : {
                 "type" : "string",
-                "description" : "Nosso Número",
-                "example" : "6565849"
+                "description" : "Nosso número. \nTamanho e obrigatoriedade podem variar de acordo com o banco. Para a maioria dos bancos e CNAB é um campo obrigatório quando  essa informação é gerada pelo cliente.\nCaso o banco gere o nosso número automáticamente e ele não seja  obrigatório enviar o parâmetro como 0 (zero).\nConsultar manual do banco para mais informações. \n",
+                "example" : 6565849,
+                "minLength" : 0,
+                "maxLength" : 10
               },
               "dataDocumento" : {
                 "type" : "string",
