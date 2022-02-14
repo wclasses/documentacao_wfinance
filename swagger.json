@@ -298,7 +298,7 @@
               "especieTitulo" : {
                 "type" : "string",
                 "minLength" : 2,
-                "description" : "Muda de acordo com o banco. Os mais comuns sendo duplicatas mercantil e de serviços, exemplos: \\n\nBanco do Brasil: \\n\n * `02` - DM (Duplicata Mercantil)\n * `04` - DS (Duplicata de Serviço)\n \n \\n\n \nItaú: \\n\n * `01` - DM (Duplicata Mercantil)\n * `08` - DS (Duplicata de Serviço)\n\nBradesco: \\n\n * `01` - DM (Duplicata Mercantil)\n * `12` - DS (Duplicata de Serviço)\n \nBanco Safra: \\n\n * `01` - DM (Duplicata Mercantil)\n * `09` - DS (Duplicata de Serviço)\n",
+                "description" : "Muda de acordo com o banco. Os mais comuns sendo duplicatas mercantil e de serviços, exemplos: \nBanco do Brasil: \n * `02` - DM (Duplicata Mercantil)\n * `04` - DS (Duplicata de Serviço)\n \nItaú:\n * `01` - DM (Duplicata Mercantil)\n * `08` - DS (Duplicata de Serviço)\n\nBradesco:\n * `01` - DM (Duplicata Mercantil)\n * `12` - DS (Duplicata de Serviço)\n \nBanco Safra:\n * `01` - DM (Duplicata Mercantil)\n * `09` - DS (Duplicata de Serviço)\n",
                 "example" : "02"
               }
             }
