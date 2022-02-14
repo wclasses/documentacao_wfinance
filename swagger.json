@@ -58,7 +58,7 @@
                 "link" : {
                   "type" : "string",
                   "description" : "Link para acesso/download do arquivo gerado",
-                  "example" : "https://boletos.wclasses.com.br/remessas/cliente/BANCO_DO_BRASIL_240_1644853107.txt\n"
+                  "example" : "https://boletos.wclasses.com.br/remessas/cliente/BANCO_DO_BRASIL_240_1644853107.txt"
                 },
                 "boletos" : {
                   "type" : "array",
