@@ -244,6 +244,32 @@
                 }
               }
             }
+          },
+          "400" : {
+            "description" : "Requisição inválida",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "error" : {
+                  "type" : "string",
+                  "description" : "Descrição do erro",
+                  "example" : "Parâmetro 'hash' é obrigatório"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Não encontrado",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "error" : {
+                  "type" : "string",
+                  "description" : "Descrição do erro",
+                  "example" : "Boleto não encontrado"
+                }
+              }
+            }
           }
         }
       }
