@@ -40,6 +40,62 @@
           }
         } ],
         "responses" : {
+          "200" : {
+            "description" : "Remessa Gerada",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "number",
+                  "description" : "ID da Remessa",
+                  "example" : 1234
+                },
+                "arquivo" : {
+                  "type" : "string",
+                  "description" : "Nome do arquivo gerado",
+                  "example" : "BANCO_DO_BRASIL_240_1644853107.txt"
+                },
+                "link" : {
+                  "type" : "string",
+                  "description" : "Link para acesso/download do arquivo gerado",
+                  "example" : "https://boletos.wclasses.com.br/remessas/cliente/BANCO_DO_BRASIL_240_1644853107.txt\n"
+                },
+                "boletos" : {
+                  "type" : "array",
+                  "items" : {
+                    "properties" : {
+                      "1234" : {
+                        "type" : "object",
+                        "description" : "Objeto boleto. Chave = número do documento",
+                        "properties" : {
+                          "id" : {
+                            "type" : "string",
+                            "description" : "ID único do boleto",
+                            "example" : "0171c719798641cac9480ba061ccfb0d082eaf7d"
+                          },
+                          "codigoBarras" : {
+                            "type" : "string",
+                            "description" : "Código de barras do boleto",
+                            "example" : "00194883000000899900000003174064000797111117"
+                          },
+                          "linhaDigitavel" : {
+                            "type" : "string",
+                            "description" : "Linha digitável do boleto",
+                            "example" : "00190.00009 03174.064000 07971.111179 4 88300000089990"
+                          },
+                          "link" : {
+                            "type" : "string",
+                            "description" : "Link de acesso ao boleto",
+                            "example" : "http://boletos.wclasses.com.br/boleto?hash=0171c719798641cac9480ba061ccfb0d082eaf7d\n"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "401" : {
             "description" : "Não autorizado",
             "schema" : {
