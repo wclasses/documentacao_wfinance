@@ -223,26 +223,24 @@
                 "example" : "150222"
               },
               "valorCobrado" : {
-                "type" : "number",
-                "description" : "Valor Bruto do registro\n",
-                "example" : 899.9
+                "type" : "string",
+                "description" : "Valor Bruto do registro.  Enviar como string, valor com 2 casas decimais.\n",
+                "example" : "899.90"
               },
               "percentualMulta" : {
-                "type" : "number",
-                "description" : "Percentual de multa a ser aplicado após vencimento.\nDe acordo com o artigo 52, parágrafo primeiro do Código de  Defesa do Consumidor, a cobrança da multa não pode ser  maior que 2%.\n",
-                "example" : 2.0,
-                "minimum" : 0,
-                "maximum" : 2.0
+                "type" : "string",
+                "description" : "Percentual de multa a ser aplicado após vencimento.\nDe acordo com o artigo 52, parágrafo primeiro do Código de  Defesa do Consumidor, a cobrança da multa não pode ser  maior que 2%.\nEnviar como string, valor com 2 casas decimais. \n",
+                "example" : "2.00"
               },
               "valorCobradoDiaAtraso" : {
-                "type" : "number",
-                "description" : "Valor dos juros cobrado por dia. O valor máximo é de 1% ao mês, se for aplicado calcular Valor Bruto * 0,00033\n",
-                "example" : 0.29
+                "type" : "string",
+                "description" : "Valor dos juros cobrado por dia. O valor máximo é de 1% ao mês, se for aplicado calcular Valor Bruto * 0,00033. Enviar como string, valor com 2 casas decimais. \n",
+                "example" : "0.29"
               },
               "valorDesconto" : {
                 "type" : "string",
-                "description" : "Valor do desconto, se condicional ao vencimento informar a  data limite de aplicação. Formato: DDMMYY\n",
-                "example" : "150222"
+                "description" : "Valor do desconto, se condicional ao vencimento informar a  data limite de aplicação. Enviar como string, valor com 2 casas decimais.\n",
+                "example" : "89.90"
               }
             }
           }
