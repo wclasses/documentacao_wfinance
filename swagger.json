@@ -250,22 +250,56 @@
               "sacadoCpfCnpj" : {
                 "type" : "string",
                 "description" : "CPF ou CNPJ do sacado.\n",
-                "example" : "43621246088"
+                "example" : "43621246088",
+                "minLength" : 11,
+                "maxLength" : 15
               },
               "sacadoNome" : {
                 "type" : "string",
                 "description" : "Nome do sacado",
-                "example" : "Tatiane Camila Alves"
+                "example" : "Tatiane Camila Alves",
+                "minLength" : 5,
+                "maxLength" : 100
               },
               "sacadoLogradouro" : {
                 "type" : "string",
                 "description" : "Endereço do Sacado com o número",
-                "example" : "Avenida Doutor Mário Maia 810"
+                "example" : "Avenida Doutor Mário Maia 810",
+                "minLength" : 5,
+                "maxLength" : 200
               },
               "sacadoBairro" : {
                 "type" : "string",
                 "description" : "Bairro do Sacado",
-                "example" : "São Francisco"
+                "example" : "São Francisco",
+                "minLength" : 2,
+                "maxLength" : 50
+              },
+              "sacadoCep" : {
+                "type" : "string",
+                "description" : "CEP do sacado, apenas números, 8 caracteres",
+                "minLength" : 8,
+                "maxLength" : 8,
+                "example" : "69901579"
+              },
+              "sacadoCidade" : {
+                "type" : "string",
+                "description" : "Cidade do Sacado",
+                "minLength" : 2,
+                "maxLength" : 100
+              },
+              "sacadoEstado" : {
+                "type" : "string",
+                "description" : "Estado (UF) do sacado",
+                "minLength" : 2,
+                "maxLength" : 2,
+                "example" : "AC"
+              },
+              "especieTitulo" : {
+                "type" : "string",
+                "minLength" : 2,
+                "description" : "Muda de acordo com o banco. Os mais comuns sendo duplicatas mercantil e de serviços, exemplos: \\n\nBanco do Brasil: \\n\n * `02` - DM (Duplicata Mercantil)\n * `04` - DS (Duplicata de Serviço)\n \n \\n\n \nItaú: \\n\n * `01` - DM (Duplicata Mercantil)\n * `08` - DS (Duplicata de Serviço)\n\nBradesco: \\n\n * `01` - DM (Duplicata Mercantil)\n * `12` - DS (Duplicata de Serviço)\n \nBanco Safra: \\n\n * `01` - DM (Duplicata Mercantil)\n * `09` - DS (Duplicata de Serviço)\n",
+                "example" : "02"
               }
             }
           }
