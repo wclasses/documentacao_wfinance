@@ -135,6 +135,53 @@
           }
         }
       }
+    },
+    "/api/boleto" : {
+      "get" : {
+        "tags" : [ "Boleto" ],
+        "summary" : "Detalhes do Boleto",
+        "description" : "Retorna os detalhes de um boleto",
+        "responses" : {
+          "200" : {
+            "description" : "Boleto",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "numeroDocumento" : {
+                  "type" : "string",
+                  "description" : "Número do documento original",
+                  "example" : "1234"
+                },
+                "arquivoRemessa" : {
+                  "type" : "number",
+                  "description" : "ID do arquivo remessa que o documento percente",
+                  "example" : 1478
+                },
+                "codigoBarras" : {
+                  "type" : "string",
+                  "description" : "Código de barras do boleto",
+                  "example" : "00194883000000899900000003174064000797111117"
+                },
+                "linhaDigitavel" : {
+                  "type" : "string",
+                  "description" : "Linha digitável do boleto",
+                  "example" : "00190.00009 03174.064000 07971.111179 4 88300000089990"
+                },
+                "link" : {
+                  "type" : "string",
+                  "description" : "Link de acesso ao boleto",
+                  "example" : "http://boletos.wclasses.com.br/boleto?hash=HASHDOBOLETO\n"
+                },
+                "status" : {
+                  "enum" : [ 0, 1, 2, 3, 4, 5, 6 ],
+                  "description" : "Status atual do boleto.\nLista de Status:\n * `0` - Não processado\n * `1` - Registrado\n * `2` - Baixa Total\n * `3` - Baixa Parcial\n * `4` - Rejeitado\n * `5` - Cancelado\n * `6` - Baixa Bancária\n",
+                  "example" : "1"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
