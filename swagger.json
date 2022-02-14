@@ -225,6 +225,22 @@
                   "format" : "date",
                   "description" : "Data de vencimento",
                   "example" : "2022-02-15"
+                },
+                "dataCriacao" : {
+                  "type" : "string",
+                  "format" : "date",
+                  "description" : "Data que o boleto foi criado no sistema",
+                  "example" : "2022-02-10"
+                },
+                "sacadoNome" : {
+                  "type" : "string",
+                  "description" : "Nome do sacado",
+                  "example" : "Tatiane Camila Alves"
+                },
+                "sacadoCpfCpnj" : {
+                  "type" : "string",
+                  "description" : "CPF/CNPJ do sacado",
+                  "example" : "43621246088"
                 }
               }
             }
