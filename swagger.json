@@ -309,7 +309,7 @@
               "instrucoes" : {
                 "type" : "string",
                 "description" : "Instruções de pagamento do boleto. Geralmente com informações ao caixa e informações sobre possíveis descontos.\n",
-                "example" : "Sr Caixa não 5 dias após o vencimento.\n"
+                "example" : "Sr Caixa não 5 dias após o vencimento"
               }
             }
           }
