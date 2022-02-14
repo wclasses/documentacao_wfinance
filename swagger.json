@@ -16,11 +16,11 @@
     "name" : "Arquivo Remessa",
     "description" : "Geração de arquivo remessa"
   }, {
-    "name" : "Arquivo Retorno",
-    "description" : "Leitura de arquivo retorno"
-  }, {
     "name" : "Boleto",
     "description" : "Geração e visualização de boletos"
+  }, {
+    "name" : "Arquivo Retorno",
+    "description" : "Leitura de arquivo retorno"
   } ],
   "paths" : {
     "/api/remessa" : {
