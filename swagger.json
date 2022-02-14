@@ -71,7 +71,7 @@
                           "id" : {
                             "type" : "string",
                             "description" : "ID único do boleto",
-                            "example" : "0171c719798641cac9480ba061ccfb0d082eaf7d"
+                            "example" : "0171c719798641cac9480be061dcfb0d082eaf7d"
                           },
                           "codigoBarras" : {
                             "type" : "string",
@@ -86,7 +86,7 @@
                           "link" : {
                             "type" : "string",
                             "description" : "Link de acesso ao boleto",
-                            "example" : "http://boletos.wclasses.com.br/boleto?hash=0171c719798641cac9480ba061ccfb0d082eaf7d\n"
+                            "example" : "http://boletos.wclasses.com.br/boleto?hash=HASHDOBOLETO\n"
                           }
                         }
                       }
