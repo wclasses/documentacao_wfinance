@@ -140,6 +140,7 @@
       "get" : {
         "tags" : [ "Boleto" ],
         "summary" : "Detalhes do Boleto",
+        "operationId" : "Boleto View",
         "description" : "Retorna os detalhes de um boleto",
         "parameters" : [ {
           "in" : "query",
@@ -184,6 +185,11 @@
                   "enum" : [ 0, 1, 2, 3, 4, 5, 6 ],
                   "description" : "Status atual do boleto.\nLista de Status:\n * `0` - Não processado\n * `1` - Registrado\n * `2` - Baixa Total\n * `3` - Baixa Parcial\n * `4` - Rejeitado\n * `5` - Cancelado\n * `6` - Baixa Bancária\n",
                   "example" : "1"
+                },
+                "valorCobrado" : {
+                  "type" : "string",
+                  "description" : "Valor cobrado do boleto",
+                  "example" : "890.90"
                 }
               }
             }
