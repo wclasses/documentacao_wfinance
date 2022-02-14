@@ -228,9 +228,9 @@
                 },
                 "dataCriacao" : {
                   "type" : "string",
-                  "format" : "date",
-                  "description" : "Data que o boleto foi criado no sistema",
-                  "example" : "2022-02-10"
+                  "format" : "datetime",
+                  "description" : "Data/Hora que o boleto foi criado no sistema",
+                  "example" : "2022-02-10 17:46:23"
                 },
                 "sacadoNome" : {
                   "type" : "string",
