@@ -141,6 +141,14 @@
         "tags" : [ "Boleto" ],
         "summary" : "Detalhes do Boleto",
         "description" : "Retorna os detalhes de um boleto",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "hash",
+          "type" : "string",
+          "description" : "Hash do boleto",
+          "required" : true
+        } ],
+        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "Boleto",
