@@ -136,7 +136,7 @@
         }
       }
     },
-    "/api/boleto" : {
+    "/api/boleto/view" : {
       "get" : {
         "tags" : [ "Boleto" ],
         "summary" : "Detalhes do Boleto",
