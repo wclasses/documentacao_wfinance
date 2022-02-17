@@ -548,6 +548,6 @@
   "security" : [ {
     "basicAuth" : [ ]
   } ],
-  "host" : "virtserver.swaggerhub.com",
-  "basePath" : "/WFinance/WFinance/1.0.0"
+  "host" : "boletos.wclasses.com.br",
+  "basePath" : "/"
 }
