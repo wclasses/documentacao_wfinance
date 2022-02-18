@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "## Documentação API WFinance\n\nAPI para geração de arquivo remessa, boleto e processo de arquivo retorno. <br><br>\nFluxo para geração dos boletos <br> <img src='https://wclasses.com.br/docs/wfinance/images/fluxo.png' width='300' />\n<br><br>\nDeve ser utilizado **Basic Auth** com o **token** de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
+    "description" : "## Documentação API WFinance\n\nAPI para geração de arquivo remessa, boleto e processo de arquivo retorno. <br><br>\nFluxo para geração dos boletos <br> <img src='https://wclasses.com.br/docs/wfinance/images/fluxo.png' width='340' />\n<br><br>\nDeve ser utilizado **Basic Auth** com o **token** de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
     "version" : "1.0.0",
     "title" : "WFinance API - 1.0.0",
     "contact" : {
@@ -28,7 +28,7 @@
         "tags" : [ "Arquivo Remessa" ],
         "summary" : "Gerar Arquivo Remessa",
         "operationId" : "Remessa Create",
-        "description" : "A chamada é separada em 2 blocos principais. <br>\n**config** - Com os dados da sua empresa e seus dados bancários. <br>\n**registros** - Um array com os dados dos boletos que deseja registrar. \n<br><br>\n\nClique nos blocos para expandir e ver os detalhes dos dados da requisição.\n",
+        "description" : "A chamada é separada em 2 blocos principais. <br>\n* `config` - Com os dados da sua empresa e seus dados bancários. <br>\n* `registros` - Um array com os dados dos boletos que deseja registrar. \n<br>\n\n**Clique nos blocos para expandir e ver os detalhes dos dados da requisição.**\n",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
