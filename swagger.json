@@ -425,41 +425,55 @@
               "dataDocumento" : {
                 "type" : "string",
                 "description" : "Data de geração do documento no formato DDMMYY.\nExemplo para a data: 10/02/2022\n",
-                "example" : "100222"
+                "example" : "100222",
+                "minLength" : 6,
+                "maxLength" : 6
               },
               "dataVencimento" : {
                 "type" : "string",
                 "description" : "Data de vencimento do documento no formato DDMMYY.\nExemplo para a data: 15/02/2022\n",
-                "example" : "150222"
+                "example" : "150222",
+                "minLength" : 6,
+                "maxLength" : 6
               },
               "valorCobrado" : {
                 "type" : "string",
                 "format" : "decimal",
                 "description" : "Valor Bruto do registro.  Enviar como string, valor com 2 casas decimais.\n",
-                "example" : "899.90"
+                "example" : "899.90",
+                "minLength" : 1,
+                "maxLength" : 14
               },
               "percentualMulta" : {
                 "type" : "string",
                 "format" : "decimal",
                 "description" : "Percentual de multa a ser aplicado após vencimento.\nDe acordo com o artigo 52, parágrafo primeiro do Código de  Defesa do Consumidor, a cobrança da multa não pode ser  maior que 2%.\nEnviar como string, valor com 2 casas decimais. \n",
-                "example" : "2.00"
+                "example" : "2.00",
+                "minLength" : 0,
+                "maxLength" : 4
               },
               "valorCobradoDiaAtraso" : {
                 "type" : "string",
                 "format" : "decimal",
                 "description" : "Valor dos juros cobrado por dia. O valor máximo é de 1% ao mês, se for aplicado calcular Valor Bruto * 0,00033. Enviar como string, valor com 2 casas decimais. \n",
-                "example" : "0.29"
+                "example" : "0.29",
+                "minLength" : 0,
+                "maxLength" : 4
               },
               "valorDesconto" : {
                 "type" : "string",
                 "format" : "decimal",
                 "description" : "Valor do desconto, se condicional ao vencimento informar a  data limite de aplicação. Enviar como string, valor com 2 casas decimais.\n",
-                "example" : "89.90"
+                "example" : "89.90",
+                "minLength" : 0,
+                "maxLength" : 14
               },
               "dataLimiteDesconto" : {
                 "type" : "string",
                 "description" : "Data limite do desconto.  Pode variar de acordo com o banco, alguns não suportam esse dado, outros deixam a configuração a ser feita pelo próprio cliente no homebanking.  Consultar manual do banco para mais informações.\n",
-                "example" : "170222"
+                "example" : "170222",
+                "minLength" : 0,
+                "maxLength" : 6
               },
               "sacadoCpfCnpj" : {
                 "type" : "string",
@@ -511,9 +525,10 @@
               },
               "especieTitulo" : {
                 "type" : "string",
-                "minLength" : 2,
                 "description" : "Muda de acordo com o banco. Os mais comuns sendo duplicatas mercantil e de serviços, exemplos: \n\nBanco do Brasil: \n * `02` - DM (Duplicata Mercantil)\n * `04` - DS (Duplicata de Serviço)\n \nItaú:\n * `01` - DM (Duplicata Mercantil)\n * `08` - DS (Duplicata de Serviço)\n\nBradesco:\n * `01` - DM (Duplicata Mercantil)\n * `12` - DS (Duplicata de Serviço)\n \nBanco Safra:\n * `01` - DM (Duplicata Mercantil)\n * `09` - DS (Duplicata de Serviço)\n",
-                "example" : "02"
+                "example" : "02",
+                "minLength" : 2,
+                "maxLength" : 2
               },
               "demonstrativo" : {
                 "type" : "string",
