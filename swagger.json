@@ -14,7 +14,7 @@
   },
   "tags" : [ {
     "name" : "Arquivo Remessa",
-    "description" : "Geração de arquivo remessa"
+    "description" : "Chamadas para API para gerar e consultar um arquivo remessa.\n"
   }, {
     "name" : "Boleto",
     "description" : "Geração e visualização de boletos"
@@ -28,7 +28,7 @@
         "tags" : [ "Arquivo Remessa" ],
         "summary" : "Gerar Arquivo Remessa",
         "operationId" : "Remessa Create",
-        "description" : "Gera um arquivo remessa\n",
+        "description" : "A chamada é separada em 2 blocos principais. <br>\n**config** - Com os dados da sua empresa e seus dados bancários. <br>\n**registros** - Um array com os dados dos boletos que deseja registrar. \n<br><br>\n\nClique nos blocos para expandir e ver os detalhes dos dados da requisição.\n",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
