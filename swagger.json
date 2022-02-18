@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "## WFinance API\nDeve ser utilizado **Basic Auth** com o token de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
+    "description" : "## Documentação API WFinance\n\nAPI para geração de arquivo remessa, boleto e processo de arquivo retorno.\n\nDeve ser utilizado **Basic Auth** com o token de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
     "version" : "1.0.0",
     "title" : "WFinance API - 1.0.0",
     "contact" : {
