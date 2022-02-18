@@ -288,12 +288,16 @@
             "banco" : {
               "type" : "string",
               "description" : "Código do banco com zero a esquerda se houver, bancos homologados:\n   * `001` - Banco do Brasil - CNAB 240\n   * `033` - Santander - CNAB 400\n   * `237` - Bradesco - CNAB 400\n   * `341` - Itaú - CNAB 400\n   * `422` - Banco Safra - CNAB 400\n",
-              "example" : "001"
+              "example" : "001",
+              "minLength" : 3,
+              "maxLength" : 3
             },
             "cnab" : {
               "type" : "number",
               "description" : "Código do CNAB:\n  * `400` \n  * `240`\n",
-              "example" : 240
+              "example" : 240,
+              "minLength" : 3,
+              "maxLength" : 3
             },
             "carteira" : {
               "type" : "string",
@@ -317,27 +321,35 @@
               "description" : "Nº Agência Bancária sem o dígito",
               "example" : "0123",
               "minLength" : 1,
-              "maxLength" : 5
+              "maxLength" : 8
             },
             "digitoAgencia" : {
               "type" : "string",
               "description" : "Nº do dígito Agência Bancária",
-              "example" : "0"
+              "example" : "0",
+              "minLength" : 1,
+              "maxLength" : 1
             },
             "contaCorrente" : {
               "type" : "string",
               "description" : "Nº da conta corrente sem o dígito",
-              "example" : "0123456"
+              "example" : "0123456",
+              "minLength" : 1,
+              "maxLength" : 20
             },
             "digitoContaCorrente" : {
               "type" : "string",
               "description" : "Nº do dígito da conta corrente",
-              "example" : "1"
+              "example" : "1",
+              "minLength" : 1,
+              "maxLength" : 1
             },
             "cedenteNome" : {
               "type" : "string",
               "description" : "Nome do cedente, nome da sua empresa:",
-              "example" : "Escola infantil Aprender LTDA"
+              "example" : "Escola infantil Aprender LTDA",
+              "minLength" : 5,
+              "maxLength" : 250
             },
             "cedenteCpfCnpj" : {
               "type" : "string",
@@ -349,7 +361,9 @@
             "cedenteLogradouro" : {
               "type" : "string",
               "description" : "Endereço e número do cedente/empresa",
-              "example" : "Rua nove de Julho 72"
+              "example" : "Rua nove de Julho 72",
+              "minLength" : 5,
+              "maxLength" : 250
             },
             "cedenteBairro" : {
               "type" : "string",
@@ -359,7 +373,9 @@
             "cedenteCidade" : {
               "type" : "string",
               "description" : "Cidade do cedente/empresa",
-              "example" : "São Paulo"
+              "example" : "São Paulo",
+              "minLength" : 1,
+              "maxLength" : 250
             },
             "cedenteEstado" : {
               "type" : "string",
