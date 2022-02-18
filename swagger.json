@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "## Documentação API WFinance\n\nAPI para geração de arquivo remessa, boleto e processo de arquivo retorno.\nFluxo para geração dos boletos\n<img src='https://wclasses.com.br/docs/wfinance/images/fluxo.png' width='200' />\n\nDeve ser utilizado **Basic Auth** com o token de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
+    "description" : "## Documentação API WFinance\n\nAPI para geração de arquivo remessa, boleto e processo de arquivo retorno. <br><br>\nFluxo para geração dos boletos <img src='https://wclasses.com.br/docs/wfinance/images/fluxo.png' width='300' />\n<br>\nDeve ser utilizado **Basic Auth** com o **token** de acesso em **username** e **password** em todas as requisições.\nPara obter o token de acesso entre em contato. ",
     "version" : "1.0.0",
     "title" : "WFinance API - 1.0.0",
     "contact" : {
